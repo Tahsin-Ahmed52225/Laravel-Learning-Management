@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::match(['get', 'post'], '/login-lms', 'UserController@login')->name('login-lms');
 Route::POST('/login_teacher', 'UserController@login_teacher')->name('login_teacher');
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/verify', 'UserController@verify_User')->name('verify_User');

@@ -1,0 +1,305 @@
+
+
+
+  html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --heading_color: #264653;
+    --primary_color: #2a9d8f;
+    --hover_btn_color: #17171f;
+    --text_color: #3F4B5D;
+    --white_color: #fff;
+}
+
+
+/* hero section css start */
+
+
+/* navbar css start */
+.main_navbar{
+    padding: 5px 0px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+.main_navbar .navbar .navbar-nav li{
+    position: relative;
+    margin-right: 40px;
+    transition: 0.4s;
+}
+.main_navbar .navbar .navbar-nav li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 2px;
+    width: 10%;
+    margin: 0 auto !important;
+    background: var(--heading_color);
+    transition: 0.4s;
+}
+.main_navbar .navbar .navbar-nav li a:hover:after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 2px;
+    width: 100%;
+    margin: 0 auto !important;
+    background: var(--heading_color);
+    transition: 0.4s;
+}
+.main_navbar .navbar .navbar-nav li a:focus::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 2px;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--heading_color);
+    transition: 0.4s;
+}
+.main_navbar .navbar .navbar-nav li a:focus{
+    color: var(--heading_color);
+}
+.main_navbar .navbar .navbar-nav li a{
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    transition: .4s all ease;
+
+}
+.main_navbar .navbar .navbar-nav li a:hover{
+    color: var(--heading_color);
+    transition: .4s all ease;
+}
+.main_navbar .navbar .navbar-nav li button{
+    background: var(--primary_color);
+    color: #fff;
+    padding: 7px 25px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.main_navbar .navbar .navbar-nav li button:hover{
+    background: var(--hover_btn_color);
+}
+.main_navbar .navbar .navbar-nav li button:focus{
+    box-shadow: none;
+}
+/* navbar css end */
+
+/* home banner css */
+.banner_section{
+    height: 91vh;
+    background: #e8e8e8;
+    font-family: 'Poppins', sans-serif;
+}
+.hero_banner_left{
+    padding: 120px 0px;
+}
+.hero_banner_left img{
+    width: 100%;
+    padding-right: 50px;
+}
+.hero_banner_right h1{
+    color: var(--heading_color);
+}
+.hero_banner_right hr{
+    height: 2px;
+    width: 150px;
+    margin-left: 0px;
+    background: var(--heading_color);
+}
+.hero_banner_right p{
+    color: var(--text_color);
+}
+.hero_banner_right .btn{
+    margin-top: 20px;
+    background: var(--primary_color);
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    transition: .4s all ease;
+}
+.hero_banner_right .btn:hover{
+    color: #fff;
+    background: var(--hover_btn_color);
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.hero_banner_right .btn:focus{
+    box-shadow: none;
+}
+/* home section css end */
+
+/* login page css start */
+.login_main{
+    padding: 60px 0px;
+    font-family: 'Poppins', sans-serif;
+}
+.login_main .login_content_wrapper .main_content_wrapper .card{
+    border: none;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 12%);
+}
+.login_main .login_content_wrapper .main_content_wrapper .card .card-img-top{
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+}
+.login_main .login_content_wrapper .header{
+    color: var(--heading_color);
+    text-shadow: 2px 1px 1px var(--primary_color);
+}
+.login_main .login_content_wrapper hr{
+    height: 2px;
+    width: 150px;
+    background: var(--heading_color);
+    margin-bottom: 50px;
+}
+.login_main .login_content_wrapper .main_content_wrapper .card .card-body .card-title{
+    color: var(--heading_color);
+}
+.login_main .login_content_wrapper .main_content_wrapper .card .card-body .card-text{
+    color: var(--text_color);
+}
+.login_main .login_content_wrapper .main_content_wrapper .card .card-body .btn{
+    background: var(--primary_color);
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 25px;
+    border: none;
+    transition: .4s all ease;
+}
+.login_main .login_content_wrapper .main_content_wrapper .card .card-body .btn:hover{
+    background: var(--hover_btn_color);
+    transition: .4s all ease;
+}
+.login_main .login_content_wrapper .main_content_wrapper .card .card-body .btn:focus{
+    box-shadow: none;
+}
+
+.login_main .login_content_wrapper .main_content_wrapper .card .modal .modal-content .modal-body input[type=text],input[type=password],input[type=email]{
+    margin-bottom: 10px;
+}
+.login_main .login_content_wrapper .main_content_wrapper .card .modal .modal-content .modal-title{
+    color: var(--heading_color);
+}
+.login_main .login_content_wrapper .main_content_wrapper .card .modal .modal-content .modal-body input[type=text]:focus,input[type=password]:focus,input[type=email]:focus{
+    box-shadow: none;
+    border: 1px solid #ced4da;
+}
+/* login page css end */
+
+
+
+/* left sidebar css */
+.left_sidebar{
+    height: auto;
+    padding-top: 50px;
+    /* background: #e8e8e8; */
+
+}
+.left_sidebar .left_student_profile{
+
+}
+.left_sidebar .sidebar_icon{
+    display: inline-flex;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    font-size: 20px;
+}
+.left_sidebar .panel-title a{
+    font-size: 20px;
+}
+.left_sidebar .panel-title .down_icon{
+    display: inline-flex;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    font-size: 20px;
+}
+.left_sidebar .left_student_profile .profile_image_wrapper{
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.left_sidebar .left_student_profile .profile_image_wrapper img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.left_sidebar .left_student_profile h4{
+    text-align: center;
+    color: var(--heading_color);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.left_sidebar .panel-group{
+
+}
+.left_sidebar .panel .panel-title a{
+    color: var(--heading_color);
+    text-decoration: none;
+}
+.left_sidebar .panel .panel-body .tab .tablinks{
+    width: 100%;
+    border: none;
+    padding: 10px 0px;
+    transition: .4s all ease;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: .4s all ease;
+    -moz-transition: .4s all ease;
+    -ms-transition: .4s all ease;
+    -o-transition: .4s all ease;
+}
+.left_sidebar .panel .panel-body .tab .tablinks:focus{
+    outline: none;
+    border-bottom: 2px solid #d4d4d4;
+    color: var(--primary_color);
+}
+.left_sidebar .panel .panel-body .tab .tablinks:hover{
+    color: var(--primary_color);
+    transition: .4s all ease;
+    border-bottom: 2px solid #d4d4d4;
+    -webkit-transition: .4s all ease;
+    -moz-transition: .4s all ease;
+    -ms-transition: .4s all ease;
+    -o-transition: .4s all ease;
+}
+
+.middle_content{
+    padding-top: 50px;
+}
+.middle_content{
+
+}
+
+/* student home page css end */

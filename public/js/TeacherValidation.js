@@ -87,7 +87,7 @@ function teacher_signUp() {
                     },
 
                     type: 'POST',
-                    url: '/login-lms',
+                    url: '/login',
                     data: {
                         'first_name': fname,
                         'last_name': lname,

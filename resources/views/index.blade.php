@@ -64,7 +64,7 @@
                             <p>Edmodo allows your whole community to learn together from anywhere with all-in-one LMS, communication,
                                 collaboration, and Zoom video conferencing tools..Manage your classroom.
                                 Engage your students. Safe. Simple. Free.</p>
-                                <a href="{{ route('login-lms') }}" class="btn">Sign up for a free account</a>
+                                <a href="{{ route('login') }}" class="btn">Sign up for a free account</a>
                         </div>
 
                     </div>

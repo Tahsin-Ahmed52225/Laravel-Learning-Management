@@ -48,7 +48,7 @@ class User extends Authenticatable
     }
     public function isTeacher()
     {
-        if ($this->type == 'coach') {
+        if ($this->type == 'teacher') {
             return true;
         } else {
             return false;
@@ -56,10 +56,13 @@ class User extends Authenticatable
     }
     public function isStudent()
     {
-        if ($this->type == 'league') {
+        if ($this->type == 'student') {
             return true;
         } else {
             return false;
         }
+    }
+    public function class()
+    {
     }
 }

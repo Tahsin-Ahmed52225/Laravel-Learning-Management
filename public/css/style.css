@@ -203,6 +203,13 @@ body{
     box-shadow: none;
     border: 1px solid #ced4da;
 }
+.login_main .login_content_wrapper .main_content_wrapper .forgot_password_wrapper{
+    margin-top: 15px;
+}
+.login_main .login_content_wrapper .main_content_wrapper .forgot_password_wrapper a{
+    color: var(--text_color);
+    text-decoration: underline;
+}
 /* login page css end */
 
 
@@ -214,9 +221,7 @@ body{
     /* background: #e8e8e8; */
 
 }
-.left_sidebar .left_student_profile{
 
-}
 .left_sidebar .sidebar_icon{
     display: inline-flex;
     width: 30px;
@@ -262,9 +267,7 @@ body{
     font-size: 20px;
     margin-bottom: 20px;
 }
-.left_sidebar .panel-group{
 
-}
 .left_sidebar .panel .panel-title a{
     color: var(--heading_color);
     text-decoration: none;
@@ -298,8 +301,6 @@ body{
 .middle_content{
     padding-top: 50px;
 }
-.middle_content{
 
-}
 
 /* student home page css end */

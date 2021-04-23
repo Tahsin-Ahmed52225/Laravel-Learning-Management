@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 use App\User;
 
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\Hash;
 
@@ -35,7 +35,8 @@ class Usercontroller extends Controller
             }
 
             $msg = "<div class='alert alert-success fade show' role='alert'>
-                                          Successfully registred!
+                                          Successfully registred!<br>
+                                    Verificatin Link has send to you email
                                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                 <span aria-hidden='true'>&times;</span>
                             </button>
@@ -43,7 +44,7 @@ class Usercontroller extends Controller
             return response()->json(array('msg' => $msg), 200);
         }
         if ($req->isMethod("GET")) {
-            return view("auth.login2");
+            return view("auth.login");
         }
     }
     public function verify_User(Request $req)
@@ -71,12 +72,38 @@ class Usercontroller extends Controller
                     Auth::logout();
                     return redirect()->back()->with(session()->flash('alert-warning', 'Please verify you email first'));
                 } else {
-                    return "echo 'I am logged in'";
+                    return redirect()->route("teacher.dashboard");
                 }
             } else {
                 return redirect()->back()->with(session()->flash('alert-danger', 'Incorrect Credentials'));
             }
         }
         return view('index');
+    }
+
+    public function login_student(Request $req)
+    {
+        $email = $req->student_email;
+        $password = $req->student_password;
+
+        if ($req->isMethod('post')) {
+
+            if (Auth::attempt(['email' =>  $email, 'password' => $password])) {
+                if (Auth::user()->is_verified == 0) {
+                    Auth::logout();
+                    return redirect()->back()->with(session()->flash('alert-warning', 'Please verify you email first'));
+                } else {
+                    return redirect()->route("student.dashboard");
+                }
+            } else {
+                return redirect()->back()->with(session()->flash('alert-danger', 'Incorrect Credentials'));
+            }
+        }
+        return view('index');
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('index');
     }
 }

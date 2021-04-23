@@ -1,0 +1,26 @@
+
+:root{
+    --heading_color: #264653;
+    --primary_color: #2a9d8f;
+    --hover_btn_color: #17171f;
+    --text_color: #3F4B5D;
+    --other_color: #e76f51;
+    --white: #fff;
+}
+
+
+
+/* class content header start */
+.main_content .class_content .class_content_header select{
+    color: var(--text_color);
+    border: 1px solid #DCDCDC;
+}
+.main_content .class_content .class_content_header select:focus{
+    box-shadow: none;
+    border: 1px solid #DCDCDC;
+}
+.main_content .class_content textarea {
+    border: 1px solid #dcdcdc;
+    color: var(--text_color);
+    border: none;
+}

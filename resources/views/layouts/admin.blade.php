@@ -6,18 +6,25 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- favicon link -->
+    <link rel="icon" href="../asset/images/favicon.png" type="image/gif" sizes="16x16">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- google font link -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- for datatable css link -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
     <!-- Main css -->
-    <link rel="stylesheet" href="{{ asset("css/student_home.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/default.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/datatable.css") }}">
 
-    <title>LMS - Student</title>
+    <title>LMS - Admin</title>
 
     </head>
+
+
     <body>
 
 
@@ -35,19 +42,14 @@
                     </div>
 
                     <ul class="list-sidebar bg-default">
-                        <li class="nav-item">
-                            <a href="#" data-toggle="collapse" data-target="#dashboard" class="collapsed active" >
-                                <i class="fa fa-university"></i> <span class="nav-label"> My Classes </span> <span class="fa fa-chevron-right pull-right"></span>
-                            </a>
-                            <ul class="sub-menu collapse" id="dashboard">
-                                @foreach ( $courses as $item )
-                                      <li><a href="{{ route("student.Stuclass", $item->CourseID) }}">{{ $item->Course_Name }}</a></li>
-                                @endforeach
-
-                            </ul>
+                        <li>
+                            <a href="\{{ Auth::user()->type }}\dashboard"><i class="fa fa-user"></i> <span class="nav-label">View all teachers</span> </a>
                         </li>
                         <li>
-                            <a href="{{ route("student.Stuallclass") }}"><i class="fa fa-bookmark"></i> <span class="nav-label">All Classes</span> </a>
+                            <a href="{{ route("admin.allstudent") }}"><i class="fa fa-users"></i> <span class="nav-label">View all students</span> </a>
+                        </li>
+                        <li>
+                            <a href="{{ route("admin.allcourse") }}"><i class="fa fa-bookmark"></i> <span class="nav-label">View all Courses</span> </a>
                         </li>
                     </ul>
                 </div>
@@ -56,7 +58,7 @@
 
             <!-- Right Sidebar -->
             <aside class="w-100">
-                <header class="tdg_header">
+            <header class="tdg_header">
                     <div class="container">
                         <!-- Top Navbar -->
                         <nav class="navbar navbar_1 navbar-expand-sm navbar-light pt-0 pb-0 pl-0">
@@ -67,51 +69,17 @@
 
                             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                                 <ul class="navbar-nav ml-auto">
-                                    <!-- join new class modal -->
-                                    <div>
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn join_class_btn" data-toggle="modal" data-target="#exampleModalCenter">
-                                            Join a New Class
-                                        </button>
-
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLongTitle">Join Your New Class : </h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                    </div>
-                                                    <form action="{{ route("student.joinclass") }}" method="POST">
-                                                        @csrf
-                                                            <div class="modal-body">
-                                                                <input name="course_code" type="text" class="form-control" placeholder="Enter Your Class Code..">
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="submit" class="btn join_btn">Join</button>
-                                                            </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- notification start -->
+                                    <!-- notification content start -->
                                     <li class="nav-item dropdown messages-menu">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fa fa-bell-o"></i>
                                             <span class="label label-success bg-success">10</span>
                                         </a>
-
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <ul class="dropdown-menu-over list-unstyled">
-
                                                 <li class="header-ul text-center">You have 10 Notification</li>
-
-                                                <!-- notification content -->
                                                 <li>
+                                                    <!-- Notification content -->
                                                     <ul class="menu list-unstyled">
                                                         <li>
                                                             <a href="#">
@@ -141,7 +109,7 @@
                                                         <li>
                                                             <a href="#">
                                                                 <div class="pull-left">
-                                                                    <img src="../asset/images/profile_p.png" class="rounded-circle" alt="User Image">
+                                                                    <img src="{{ asset("img/profile_p.png") }}" class="rounded-circle" alt="User Image">
                                                                 </div>
                                                                 <h4>
                                                                     Developers
@@ -176,16 +144,17 @@
                                                         </li>
                                                     </ul>
                                                 </li>
+
                                                 <!-- notification footer -->
                                                 <li class="footer-ul text-center">
-                                                    <a href="#">See All Messages</a>
+                                                    <a href="#">See All Notification</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
-                                    <!-- notification end -->
+                                    <!-- notification content end -->
 
-                                    <!-- Message start -->
+                                    <!-- start message -->
                                     <li class="nav-item dropdown notifications-menu">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fa fa-envelope-o"></i>
@@ -194,8 +163,8 @@
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <ul class="dropdown-menu-over list-unstyled">
                                                 <li class="header-ul text-center">You have 5 Messages</li>
-                                                <!-- message content -->
                                                 <li>
+                                                    <!-- Message content -->
                                                     <ul class="menu list-unstyled">
                                                         <li class="d-flex mt-2">
                                                             <img src="../asset/images/profile_p.png" class="rounded-circle ml-2" style="width:40px;height:40px;" alt="User Image">
@@ -249,17 +218,15 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <!-- Message end -->
+                                    <!-- end message -->
 
-                                    <!-- right profile for student -->
+                                    <!-- right profile -->
                                     <li class="nav-item dropdown  user-menu">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <img src="{{ asset("img/profile_p.png") }}" class="user-image" alt="User Image" >
-                                            <span class="hidden-xs">{{ Auth::user()->Fname }} {{ Auth::user()->Lname }}</span>
+                                            <span class="hidden-xs">{{ Auth::user()->Lname }}</span>
                                         </a>
                                         <div class="dropdown-menu position-absolute" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="{{ route("student.profile") }}"><span class=""><i class="fa fa-user mr-2"></i></span>Profile</a>
-                                            <a class="dropdown-item" href="{{ route("student.editprofile") }}"><span class=""><i class="fa fa-edit mr-2"></i></span>Edit Profile</a>
                                             <a class="dropdown-item" href="{{ route("logout") }}"><span class=""><i class="fa fa-power-off mr-2"></i></span>Log Out</a>
                                         </div>
                                     </li>
@@ -268,17 +235,77 @@
                         </nav>
                     </div>
                 </header>
-                 @yield("content")
+@yield("content")
+                {{-- <!-- table content start -->
+                <div class="row teachers_table">
+                    <div class="col-md">
+                        <table id="example" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>UserName</th>
+                                    <th>FirstName</th>
+                                    <th>LastName</th>
+                                    <th>Email</th>
+                                    <th>Institution</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td><span>Tiger</span></td>
+                                    <td><span>Nixon</span></td>
+                                    <td>hello@gmail.com</td>
+                                    <td>Stamford University Bangladesh</td>
+                                    <td>
+                                        <a href="#" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td><span>Tiger</span></td>
+                                    <td><span>Nixon</span></td>
+                                    <td>hello@gmail.com</td>
+                                    <td>Stamford University Bangladesh</td>
+                                    <td>
+                                        <a href="#" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td><span>Tiger</span></td>
+                                    <td><span>Nixon</span></td>
+                                    <td>hello@gmail.com</td>
+                                    <td>Stamford University Bangladesh</td>
+                                    <td>
+                                        <a href="#" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tiger Nixon</td>
+                                    <td><span>Tiger</span></td>
+                                    <td><span>Nixon</span></td>
+                                    <td>hello@gmail.com</td>
+                                    <td>Stamford University Bangladesh</td>
+                                    <td>
+                                        <a href="#" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div> --}}
+                <!-- table content end -->
             </aside>
         </div>
-
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
     <script>
         $(document).ready(function(){
           $('.button-left').click(function(){
@@ -288,6 +315,32 @@
     </script>
 
 
+    <!-- for datatable -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    var table = $('#example').DataTable({
+        columnDefs: [{
+            orderable: false,
+            targets: [1,2,3]
+        }]
+    });
 
-</body>
+    $('button').click( function() {
+        var data = table.$('input, select').serialize();
+        alert(
+            "The following data would have been submitted to the server: \n\n"+
+            data.substr( 0, 120 )+'...'
+        );
+        return false;
+    } );
+} );
+    </script>
+
+
+
+
+
+    </body>
 </html>

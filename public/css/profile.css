@@ -1,0 +1,66 @@
+:root{
+    --color_main: #f7f7f7;
+    --color_white: #fff;
+    --heading_color: #264653;
+    --primary_color: #2a9d8f;
+    --hover_btn_color: #17171f;
+    --text_color: #3F4B5D;
+    --other_color: #e76f51;
+    --white: #fff;
+    --background_color: #EDEFF7;
+    --sidebar_background: #EDEFF7;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.about_content{
+    margin: 10px;
+    padding: 10px 10px;
+}
+.about_content .header{
+    background: var(--sidebar_background);
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.about_content .about_left .about_left_content .about_img_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about_content .about_left .about_left_content img{
+    width: 255px;
+    height: 255px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.about_content .about_right{
+    padding-left: 40px;
+}
+.about_content .about_right .about_right_content{
+    padding-top: 35px;
+    color: var(--text_color);
+}
+.about_content .about_right .about_right_content h2{
+    margin-bottom: 30px;
+}
+.about_content .about_right .about_right_content p{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.about_content .about_right .about_right_content span{
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px ;
+}
+
+

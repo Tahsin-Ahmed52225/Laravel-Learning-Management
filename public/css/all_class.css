@@ -1,0 +1,281 @@
+
+:root{
+    --heading_color: #264653;
+    --primary_color: #2a9d8f;
+    --hover_btn_color: #17171f;
+    --text_color: #3F4B5D;
+    --other_color: #e76f51;
+    --white: #fff;
+    --sidebar_background: #EDEFF7;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* navbar css start */
+.main_navbar{
+    padding: 5px 0px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+.main_navbar .navbar .navbar-nav li{
+    position: relative;
+    margin-right: 40px;
+    transition: 0.4s;
+}
+.main_navbar .navbar .navbar-nav li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 2px;
+    width: 10%;
+    margin: 0 auto !important;
+    background: var(--heading_color);
+    transition: 0.4s;
+}
+.main_navbar .navbar .navbar-nav li a:hover:after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 2px;
+    width: 100%;
+    margin: 0 auto !important;
+    background: var(--heading_color);
+    transition: 0.4s;
+}
+.main_navbar .navbar .navbar-nav li a:focus::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 2px;
+    width: 100%;
+    margin: 0 auto;
+    background: var(--heading_color);
+    transition: 0.4s;
+}
+.main_navbar .navbar .navbar-nav li a:focus{
+    color: var(--heading_color);
+}
+.main_navbar .navbar .navbar-nav li a{
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    transition: .4s all ease;
+
+}
+.main_navbar .navbar .navbar-nav li a:hover{
+    color: var(--heading_color);
+    transition: .4s all ease;
+}
+.main_navbar .navbar .navbar-nav li button{
+    background: var(--primary_color);
+    color: #fff;
+    padding: 7px 25px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.main_navbar .navbar .navbar-nav li button:hover{
+    background: var(--hover_btn_color);
+}
+.main_navbar .navbar .navbar-nav li button:focus{
+    box-shadow: none;
+}
+
+.main_navbar .navbar .join_class_btn{
+    background: var(--primary_color);
+    color: var(--white);
+}
+.main_navbar .navbar .join_class_btn:hover{
+    background: var(--hover_btn_color);
+}
+.main_navbar .navbar .join_class_btn:focus{
+    box-shadow: none;
+}
+.main_navbar .navbar .modal .modal-title{
+    color: var(--heading_color);
+}
+.main_navbar .navbar .modal .modal-footer .join_btn {
+    color: var(--white);
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: var(--primary_color);
+    width: 30%;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+}
+.main_navbar .navbar .modal .modal-footer .join_btn:hover{
+    background: var(--hover_btn_color);
+}
+.main_navbar .navbar .modal .modal-footer .join_btn:focus{
+    box-shadow: none;
+}
+.main_navbar .navbar .modal .modal-body input[type=text]:focus{
+    box-shadow: none;
+}
+.main_navbar .navbar .dropdown img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 25px;
+}
+.main_navbar .navbar .dropdown .dropdown-item{
+    transition: .4s all ease;
+    -webkit-transition: .4s all ease;
+    -moz-transition: .4s all ease;
+    -ms-transition: .4s all ease;
+    -o-transition: .4s all ease;
+}
+.main_navbar .navbar .dropdown .dropdown-item:active{
+    background: transparent;
+}
+.main_navbar .navbar .dropdown .dropdown-item:focus{
+    background: var(--primary_color);
+    color: var(--white);
+}
+.main_navbar .navbar .dropdown .dropdown-item:hover{
+    color: var(--primary_color);
+    transition: .4s all ease;
+    -webkit-transition: .4s all ease;
+    -moz-transition: .4s all ease;
+    -ms-transition: .4s all ease;
+    -o-transition: .4s all ease;
+}
+.main_navbar .navbar .dropdown .dropdown-toggle{
+    color: var(--primary_color);
+}
+.main_navbar .navbar .fa-bell{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--hover_btn_color);
+}
+
+/* navbar css end */
+
+
+/* middle content css start */
+.all_classes_content{
+    font-family: 'Poppins', sans-serif;
+}
+.all_classes_content .middle_content{
+    padding: 20px;
+    background: var(--sidebar_background);
+    border-radius: 10px;
+}
+.all_classes_content .middle_content .heading{
+    color: var(--heading_color);
+    font-size: 20px;
+    padding: 10px;
+    font-size: 30px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+.all_classes_content .middle_content .heading .badge{
+    background: var(--primary_color);
+    color: var(--color_white);
+}
+.all_classes_content .middle_content .middle_column{
+    padding: 20px;
+    border: 1px solid var(--primary_color);
+    border-radius: 10px;
+    background: #fff;
+    margin: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.all_classes_content .middle_content .middle_column a{
+    text-decoration: none;
+}
+.all_classes_content .middle_content .class_wrapper{
+    padding: 10px;
+    border-left: 5px solid var(--primary_color);
+    border-right: 5px solid var(--primary_color);
+    border-radius: 10px;
+}
+.all_classes_content .middle_content .class_wrapper h2{
+    font-size: 20px;
+    color: var(--heading_color);
+}
+.all_classes_content .middle_content .class_wrapper p{
+    font-size: 16px;
+    color: var(--text_color);
+
+}
+.all_classes_content .middle_content .middle_column .teacher_profile p{
+    margin-left: 17px;
+}
+
+.all_classes_content .middle_content .middle_column .teacher_profile::before{
+    content: '';
+    position: absolute;
+    margin-top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary_color);
+    -webkit-border-radius: 50%;
+}
+.all_classes_content .middle_content .middle_column .teacher_profile:hover{
+    text-decoration: underline;
+    color: var(--primary_color);
+}
+/* middle content css end */
+
+
+
+/* =====================    Teacher all classes content css start   ====================== */
+.all_classes_content .all_class_row{
+    margin-right: 10px;
+    margin-left: 0px;
+    margin-top: 15px;
+
+}
+.all_classes_content .main_right_content{
+    padding: 40px 14px;
+    background: var(--sidebar_background);
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right: -13px;
+}
+.all_classes_content .main_right_content a{
+    text-decoration: none;
+
+}
+.all_classes_content .main_right_content h3{
+    color: var(--heading_color);
+}
+.all_classes_content .main_right_content .upcoming_content{
+    padding: 10px;
+    box-shadow: 0px 0px 10px #0000001c;
+    border-radius: 5px;
+    transition: .4s all ease;
+    margin-bottom: 10px;
+    background: var(--color_white);
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 20%);
+}
+.all_classes_content .main_right_content .upcoming_content:hover{
+    box-shadow: 0px 0px 30px #0000001c;
+    transition: .4s all ease;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+}
+.all_classes_content .main_right_content .upcoming_content p{
+    margin-bottom: -3px;
+    color: var(--text_color);
+}
+.all_classes_content .main_right_content .upcoming_content p small{
+    color: red;
+}
+
+/* =====================    Teacher all classes content css end    ====================== */

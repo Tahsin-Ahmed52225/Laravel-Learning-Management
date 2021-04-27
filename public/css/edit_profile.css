@@ -1,0 +1,43 @@
+
+
+:root{
+    --color_main: #f7f7f7;
+    --color_white: #fff;
+    --heading_color: #264653;
+    --primary_color: #2a9d8f;
+    --hover_btn_color: #17171f;
+    --text_color: #3F4B5D;
+    --other_color: #e76f51;
+    --white: #fff;
+    --background_color: #EDEFF7;
+    --sidebar_background: #EDEFF7;
+}
+
+body{
+    
+    overflow-x: hidden;
+}
+
+.edit_content{
+    font-family: 'Poppins', sans-serif;
+}
+.edit_content .main_content{
+    padding: 40px;
+    background: var(--sidebar_background);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.edit_content .main_content input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus{
+    box-shadow: none;
+    outline: none;
+}
+.edit_content .main_content .changes_btn{
+    background: var(--primary_color);
+    color: var(--color_white);
+    padding: 10px 20px;
+    font-weight: 500;
+}
+.edit_content .main_content .changes_btn:hover{
+    background: var(--hover_btn_color);
+    color: var(--color_white);
+}

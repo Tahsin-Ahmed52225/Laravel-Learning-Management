@@ -106,4 +106,24 @@ class Usercontroller extends Controller
         Auth::logout();
         return redirect()->route('index');
     }
+    public function adminlogin(Request $request)
+    {
+        $email = $request->admin_email;
+        $password = $request->admin_password;
+        if ($request->isMethod("GET")) {
+            return view("adminlogin");
+        } elseif ($request->isMethod("POST")) {
+            if (Auth::attempt(['email' =>  $email, 'password' => $password])) {
+                if (Auth::user()->is_verified == 0) {
+                    Auth::logout();
+                    return redirect()->back()->with(session()->flash('alert-warning', 'Please verify you email first'));
+                } else {
+
+                    return redirect()->route("admin.dashboard");
+                }
+            } else {
+                return redirect()->back()->with(session()->flash('alert-danger', 'Incorrect Credentials'));
+            }
+        }
+    }
 }

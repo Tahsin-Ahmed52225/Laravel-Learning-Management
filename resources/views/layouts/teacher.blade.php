@@ -17,7 +17,7 @@
     <!-- teacher page css link -->
     <link rel="stylesheet" href="{{ asset("css/teacher.css") }}">
 
-    <title>Teacher Home</title>
+    <title>LMS-Teacher</title>
 
     </head>
     <body>
@@ -44,7 +44,7 @@
                             <ul class="sub-menu collapse" id="dashboard">
                                 @foreach ($courses as $item)
                                     <li>
-                                        <a href="#">{{ $item->Course_name }} : {{ $item->Course_code }}</a>
+                                        <a href="{{ route("teacher.class", $item->id) }}">{{ $item->Course_name }} : {{ $item->Course_code }}</a>
                                     </li>
                                 @endforeach
 
@@ -52,7 +52,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="../pages/teacher_all_class.html"><i class="fa fa-bookmark"></i> <span class="nav-label">All Classes</span> </a>
+                            <a href="{{ route("teacher.allclass") }}"><i class="fa fa-bookmark"></i> <span class="nav-label">All Classes</span> </a>
                         </li>
                     </ul>
                 </div>
@@ -263,8 +263,8 @@
                                             <span class="hidden-xs">{{ Auth::user()->Fname }} {{ Auth::user()->Lname }}</span>
                                         </a>
                                         <div class="dropdown-menu position-absolute" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="#"><span class=""><i class="fa fa-user mr-2"></i></span>Profile</a>
-                                            <a class="dropdown-item" href="#"><span class=""><i class="fa fa-edit mr-2"></i></span>Edit Profile</a>
+                                            <a class="dropdown-item" href="{{ route("teacher.profile") }}"><span class=""><i class="fa fa-user mr-2"></i></span>Profile</a>
+                                            <a class="dropdown-item" href="{{ route("teacher.editprofile") }}"><span class=""><i class="fa fa-edit mr-2"></i></span>Edit Profile</a>
                                             <a class="dropdown-item" href="{{ route("logout") }}"><span class=""><i class="fa fa-power-off mr-2"></i></span>Log Out</a>
                                         </div>
                                     </li>

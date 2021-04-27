@@ -21,7 +21,7 @@
             <div class="container">
                 <!-- hero navbar start -->
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/">
                         <img src="{{ asset("img/nav_brand.png") }}" alt="TurggoMax">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
                                 <a class="nav-link" href="#">Getting Started</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <button href="#" class="btn">Log In</button>
+                                    <button onclick="location.href='{{ route('login') }}'" class="btn">Log In</button>
                             </li>
                         </ul>
                     </div>

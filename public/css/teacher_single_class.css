@@ -1,0 +1,159 @@
+
+:root{
+    --color_main: #f7f7f7;
+    --color_white: #fff;
+    --heading_color: #264653;
+    --primary_color: #2a9d8f;
+    --hover_btn_color: #17171f;
+    --text_color: #3F4B5D;
+    --other_color: #e76f51;
+    --white: #fff;
+    --background_color: #EDEFF7;
+    --sidebar_background: #EDEFF7;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* teacher single page css start */
+.single_class .single_class_header{
+    padding: 20px;
+    margin-top: 20px;
+    background: var(--background_color);
+    border-radius: 10px;
+    border-left: 10px solid var(--primary_color);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.single_class .single_class_header h2{
+    color: var(--heading_color);
+    font-size: 28px;
+}
+.single_class .single_class_header p{
+    color: var(--text_color);
+    margin-bottom: 0px;
+}
+.single_class .single_class_header p a{
+    color: var(--heading_color);
+}
+.single_class .post_part .student_post textarea{
+    color: var(--text_color);
+}
+.single_class .post_part .student_post textarea:focus{
+    box-shadow: none;
+}
+.single_class .post_part .student_post .btn{
+    background: var(--primary_color);
+    padding: 10px 30px;
+    color: var(--color_white);
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.single_class .post_part .student_post .btn:hover{
+    background: var(--hover_btn_color);
+}
+
+/* single main content css */
+.single_class .single_main_content{
+    padding: 20px 40px 70px 20px;
+    background: var(--sidebar_background);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.single_class .single_main_content .teacher_profile_wrapper img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.single_class .single_main_content p a{
+    color: var(--heading_color);
+    font-weight: bold;
+}
+.single_class .single_main_content small{
+    color: var(--text_color);
+}
+.single_class .single_main_content .class_post{
+    color: var(--text_color);
+    padding: 15px 10px;
+}
+.single_class .single_main_content .like_comment a{
+    color: var(--text_color);
+}
+.single_class .single_main_content textarea{
+    border: 1px solid #dcdcdc;
+    color: var(--text_color);
+    border: none;
+}
+.single_class .single_main_content textarea::placeholder{
+    color: var(--text_color);
+}
+.single_class .single_main_content textarea:focus{
+    box-shadow: none;
+    outline: none;
+}
+.single_class .single_main_content .comment_btn{
+    background: var(--primary_color);
+    color: var(--color_white);
+    margin-top: 10px;
+    font-weight: 500;
+}
+.single_class .single_main_content .comment_btn:hover{
+    background: var(--hover_btn_color);
+}
+.single_class .single_main_content .like_comment .comment_wrapper{
+    padding-top: 7px;
+    background: var(--color_white);
+    margin: 0px 15px;
+    border-radius: 5px;
+}
+
+
+/* right content css */
+.single_class .all_class_row{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.single_class .main_right_content{
+    padding: 40px 14px;
+    margin-top: 20px;
+    margin-right: 12px;
+    background: var(--sidebar_background);
+    border-radius: 10px;
+}
+.single_class .main_right_content a{
+    text-decoration: none;
+    
+}
+.single_class .main_right_content h3{
+    color: var(--heading_color);
+}
+.single_class .main_right_content .upcoming_content{
+    padding: 10px;
+    box-shadow: 0px 0px 10px #0000001c;
+    border-radius: 5px;
+    transition: .4s all ease;
+    margin-bottom: 10px;
+}
+.single_class .main_right_content .upcoming_content:hover{
+    box-shadow: 0px 0px 30px #0000001c;
+    transition: .4s all ease;
+}
+.single_class .main_right_content .upcoming_content p{
+    margin-bottom: -3px;
+    color: var(--text_color);
+}
+.single_class .main_right_content .upcoming_content p small{
+    color: red;
+}
+
+
+
+
+/* teacher single page css end */

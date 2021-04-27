@@ -1,0 +1,27 @@
+
+:root{
+    --background_color: #EDEFF7;
+}
+
+body{
+    overflow-x: hidden;
+}
+.teachers_table{
+    padding: 30px;
+    margin: 15px;
+    background: var(--background_color);
+    border-radius: 10px;
+}
+.dataTables_wrapper .dataTables_filter input:focus-visible{
+    outline: none;
+}
+.dataTables_info{
+    margin-top: 20px;
+}
+#example_paginate{
+    margin-top: 20px;
+}
+
+.sidebar li a:focus{
+    background: #fff;
+}

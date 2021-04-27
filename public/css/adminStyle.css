@@ -1,0 +1,131 @@
+
+
+:root{
+    --primary_color: #2a9d8f;
+    --hover_btn_color: #17171f;
+    --white_color: #fff;
+}
+
+
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #e8e8e8;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+}
+.login_wrapper{
+    margin-top: 85px;
+}
+.card0 {
+    box-shadow: 0px 4px 8px 0px #75757557;
+    border-radius: 0px;
+}
+.card2 {
+    margin: 0px 40px;
+}
+
+.image {
+    width: 360px;
+    height: 280px;
+}
+
+.border-line {
+    border-right: 1px solid #EEEEEE;
+}
+
+.line {
+    height: 1px;
+    width: 45%;
+    background-color: #E0E0E0;
+    margin-top: 10px;
+}
+
+.text-sm {
+    font-size: 14px !important;
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 300;
+}
+
+input {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+input:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+a {
+    color: inherit;
+    cursor: pointer
+}
+
+.btn-login{
+    background-color: var(--primary_color);
+    width: 150px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.btn-login:hover {
+    background-color: var(--hover_btn_color);
+    cursor: pointer;
+    color: var(--white_color);
+}
+.register_link{
+    color: var(--primary_color) !important;
+}
+.register_link:hover{
+    text-decoration: underline !important;
+}
+.forgot_link{
+    color: var(--primary_color) !important;
+}
+.forgot_link:hover{
+    text-decoration: underline !important;
+}
+
+@media screen and (max-width: 991px) {
+    .logo {
+        margin-left: 0px;
+    }
+
+    .image {
+        width: 300px;
+        height: 220px;
+    }
+
+    .border-line {
+        border-right: none;
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px;
+    }
+}
